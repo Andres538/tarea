@@ -1,6 +1,10 @@
+header{
+    background:radial-gradient(circle farthest-corner at center center, red, blue,yellow);
+}
 img{
     width: 300px; ;
     height: 300px;
+    border-radius: 0 30px;
 }
 #edad{
     font-size: 24px;
@@ -15,4 +19,9 @@ img{
 a:hover{
     color:red;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ol{
+    background-color: aqua;
+    width: 300px;
+    box-shadow: 10px 20px 1px blue;
 }
