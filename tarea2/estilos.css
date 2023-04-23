@@ -1,0 +1,71 @@
+header{
+    background:radial-gradient(circle farthest-corner at center center, red, blue,yellow);
+}
+img{
+    width: 300px; ;
+    height: 300px;
+    border-radius: 0 30px;
+}
+#edad{
+    font-size: 24px;
+    font-family:'Courier New', Courier, monospace;
+}
+.p{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+
+a:hover{
+    color:red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ol{
+    background-color: aqua;
+    width: 300px;
+    box-shadow: 10px 20px 1px blue;
+}
+.container{
+    background-color: yellow;
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.containe{
+    background-color: yellow;
+    width: 600px;
+    height: 300px;
+    display:flex ;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.contain{
+    background-color: yellow;
+    width: 600px;
+    height: 300px;
+    display:flex ;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    
+}
+.item1{
+    color: white;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+.item2{
+    color: white;
+    background-color: blue;
+    width: 100px;
+    height:100px;
+}
+.item3{
+    color: white;
+    background-color:green;
+    width: 100px;
+    height: 100px;
+}
