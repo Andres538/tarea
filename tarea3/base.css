@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	color: #000;
+	background: #332F29;
+	font-size:100%;
+}
+#contenedor {
+	width: 800px;
+	background: #8FA68E;
+	margin-right:auto;
+	margin-left:auto;
+	overflow: hidden;
+}
+nav {
+	background: #CC3910;
+	float: left;
+	width: 160px;
+}
+ul {
+	list-style-type:none;
+}
+a {
+	color:#F1F2C0;
+	text-decoration: none;
+}
+section {
+	background: #F1F2C0;
+	float: left;
+	margin: 0 0 0 25px;
+	width: 400px;
+}
+aside {
+	background: #CCC59E;
+	float: right;
+	width: 190px;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		color: #000;
+		background: #332F29;
+		font-size:100%;
+	}
+	#contenedor {
+		width: 800px;
+		background: #8FA68E;
+		overflow: hidden;
+	}
+	nav {
+		background: orange;
+		width: 800px;	
+		transition: all 0.3s ease 0.5s;
+	}
+	ul {
+		list-style-type:none;
+	}
+	a {
+		font-size: large;
+		color: #000;
+		text-decoration: none;
+	}
+	section {
+		background: #F1F2C0;
+		transform: translate(-24px) ;
+		width: 800px;
+		height: 150px;
+		transition: all 0.3s ease 0.5s;
+	}
+	aside {
+		background: #CCC59E;
+		float: right;
+		width: 800px;
+		height: 180px;
+		transition: all 0.3s ease 0.5s;
+	}
+	h2{
+		margin-top: 40px;
+		margin: 10px;
+	}
+	p{
+		margin: 10px;
+		margin-top: 20px;
+	}
+}
