@@ -64,4 +64,53 @@ nav ul li a{
     width: 250px;
     text-align: center;
 }
- 
+footer{
+    background-color: #312f2f;
+}
+ footer ul{
+    list-style: none;
+ }
+ footer ul li a{
+    color:white;
+    text-decoration: none;
+ }
+ footer ul li a:hover{
+    color:rgb(109, 22, 22);
+    text-decoration: none;
+ }
+ .contacto{
+    display: flex;
+    gap: 24px;
+ }
+ .contacto div{
+    width: 100%;
+ }
+ .Formulario p{
+    display: flex;
+ }
+ .Formulario p label{
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+ }
+ .Formulario p:nth-child(4){
+    align-items: start;
+ }
+.Formulario textarea{
+    resize: none;
+    height: 150px;
+    width: 300px;
+}
+.Formulario input[type="text"]{
+    width: 300px;
+}
+.Formulario input[type="mail"]{
+    width: 300px;
+}
+.Formulario input[type="submit"]{
+   margin-left: 80px;
+}
+.nosotros{
+    margin-left: 20px;
+    
+}
