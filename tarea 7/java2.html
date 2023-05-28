@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Java</title>
+        <script type="text/javascript" src="js/java2.js"></script>
+    </head>
+    <body id="body">
+        <button id="rojo" style="background-color: red;"> rojo</button>
+        <button id="azul" style="background-color:blue;"> azul</button>
+        <button id="amarillo" style="background-color: yellow;"> amarillo</button>
+        <br><textarea id="text"></textarea>
+        <script>
+            const azulButton=document.getElementById("azul");
+            azulButton.addEventListener('click',function(){
+                document.body.style.background="blue";
+            })
+            const rojoButton=document.getElementById("rojo");
+            rojoButton.addEventListener('click',function(){
+                document.body.style.background="red";
+            })
+            const amaButton=document.getElementById("amarillo");
+            amaButton.addEventListener('click',function(){
+                document.body.style.background="yellow";
+            })
+            const text=document.getElementById("text");
+            text.addEventListener('keyup',function(){
+                var text=document.getElementById("text")
+                alert(text.innerText.length)
+            })
+            
+            
+        </script>
+    </body>
+</html>
