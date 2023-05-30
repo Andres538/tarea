@@ -57,7 +57,11 @@ function evaluar(nota){
 }
 
 function examen(){
-    const aprobados=alumnos.filter(evaluar(alumnos.nota))
-    alert(aprobados)
+    const aprobados=alumnos.filter(function(un_alumno) {
+
+      return evaluar(un_alumno.nota)
+  
+    })
+    console.log(aprobados)
 }
 examen()
