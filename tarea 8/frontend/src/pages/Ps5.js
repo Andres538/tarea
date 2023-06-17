@@ -1,6 +1,6 @@
 const Ps5=(props)=>{
     return(
-        <main>
+        <main class="holder">
         <div class="destacados">
           <div class="box">
           <img src="img/1665006050-dead-space-remake-ps5-pre-orden-0.jpg" width="150px" height="200px"></img>

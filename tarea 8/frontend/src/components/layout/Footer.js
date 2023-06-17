@@ -1,4 +1,5 @@
 import{Link} from "react-router-dom";
+import '../../style/Footer.css'
 const Footer = (props)=>{
     return(
         <footer><h3>Mas informacion</h3>

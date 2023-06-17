@@ -1,6 +1,6 @@
 const Inicio=(props)=>{
     return(
-        <main>
+        <main class="holder">
       <div>
         <img src="img/i-stock-1287493837-1.jpg" height="300px" width="900px" alt=""></img>
     </div>

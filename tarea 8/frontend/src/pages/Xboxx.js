@@ -1,6 +1,6 @@
 const Xboxx=(props)=>{
     return(
-        <main>
+        <main class="holder">
     <div class="destacados">
       <div class="box">
       <img src="img/RE4mRni.png" width="200px" height="200px"></img>

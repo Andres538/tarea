@@ -1,6 +1,6 @@
 const Contactenos=(props)=>{
     return(
-        <main>
+        <main class="holder contacto">
         <div>
             <h2>Contactenos</h2>
             <form action="" method="" class="Formulario">

@@ -1,6 +1,6 @@
 const Nosotros=(props)=>{
     return(
-        <main>
+        <main class="holder">
         <div class="nosotros">
             <h3>¿Quienes somos?</h3>
             <p> Somos un grupo de Gamers apacionado por distribuir juegos, consolas y toda clase de accesorios que los jugadores de la zona.
