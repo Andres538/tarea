@@ -1,0 +1,9 @@
+{{#if borrar}}<img src="/images/{{imagen}}">{{else}}<h1>Seleccione una imagen</h1>{{/if}}
+<form action="/ingresar" method="post">
+{{#if auto}}{{else}}<input type="radio" value="descarga.jpg" name="imagen"><label>Auto</label>{{/if}}
+    {{#if gato}}{{else}}<input type="radio" value="descarga (1).jpg" name="imagen"><label>Gato</label>{{/if}}
+    {{#if control}}{{else}}<input type="radio" value="png-transparent-video-game-game-controllers-gaming-miscellaneous-game-logo.png" name="imagen"><label>Control</label>{{/if}}
+    {{#if borrar}}<input type="radio" value="final" name="imagen"><label>Borrar</label>{{/if}}
+    <button>Submit</button>
+
+</form>

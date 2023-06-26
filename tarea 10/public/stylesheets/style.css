@@ -1,0 +1,37 @@
+header{
+  background-color:#E74C3C;
+  padding: 16px 0;
+}
+
+header h1{
+  color: white;
+  font-size: 40px;
+  font-weight: 100;
+  font-style: italic;
+  display: inline-block;
+  position: relative;
+  bottom: 35px;
+  margin-left: 10px;
+}
+
+footer{
+  background-color: #312f2f;
+}
+footer ul{
+  list-style: none;
+}
+footer ul li a{
+  color:white;
+  text-decoration: none;
+}
+footer ul li a:hover{
+  color:rgb(109, 22, 22);
+  text-decoration: none;
+}
+body{
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: black;
+  color: white;
+}
