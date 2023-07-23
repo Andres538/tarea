@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-07-2023 a las 03:30:40
+-- Tiempo de generación: 23-07-2023 a las 15:50:58
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -56,6 +56,13 @@ CREATE TABLE `cliente` (
   `direccion` varchar(32) DEFAULT NULL,
   `numero_de_tarjeta` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id_cl`, `nombre_cl`, `mail`, `contraseña`, `telefono`, `direccion`, `numero_de_tarjeta`) VALUES
+(1, 'Carlos', 'carlos@gmail.com', 'papas', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -212,7 +219,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cl` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cl` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `marca`
