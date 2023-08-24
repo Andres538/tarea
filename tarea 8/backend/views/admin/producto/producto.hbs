@@ -24,19 +24,19 @@
                 </tr>
             </thead>
             <tbody>
-                {{#each data}}
+                {{#each productos}}
                     <tr>
-                        <th scope="row">{{id_p}}</th>
-                        <td>{{nombre_p}}</td>
-                        <td>{{precio}}</td>
-                        <td>{{nombre_m}}</td>
-                        <td>{{nombre_c}}</td>
-                        <td>{{cantidades}}</td>
-                        <td>{{imagen}}</td>
-                        <td>{{ingreso}}</td>
+                        <th scope="row">{{producto.id_p}}</th>
+                        <td>{{producto.nombre_p}}</td>
+                        <td>{{producto.precio}}</td>
+                        <td>{{producto.nombre_m}}</td>
+                        <td>{{producto.nombre_c}}</td>
+                        <td>{{producto.cantidades}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td>{{producto.ingreso}}</td>
                         <td class="text-center">
-                            <a href="/admin/producto/modificar/{{id_p}}" title="Editar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i>Editar</a>
-                            <a href="/admin/producto/eliminar/{{id_p}}" title="Eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i>Eliminar</a>
+                            <a href="/admin/producto/modificar/{{producto.id_p}}" title="Editar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i>Editar</a>
+                            <a href="/admin/producto/eliminar/{{producto.id_p}}" title="Eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i>Eliminar</a>
                         </td>
                     </tr>
                 {{/each}}

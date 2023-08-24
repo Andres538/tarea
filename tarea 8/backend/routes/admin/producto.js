@@ -8,11 +8,31 @@ const cloudinary=require('cloudinary').v2;
 
 const uploader=util.promisify(cloudinary.uploader.upload);
 router.get('/',async function(req,res,next){
-    var data= await productoModel.getProducto();
+    var productos= await productoModel.getProducto();
+    
+    productos=productos.map(producto=>{
+        if(producto.imagen){
+            const imagen=cloudinary.image(producto.imagen,{
+                witdh:100,
+                height:100,
+                crop:'fill'
+            });
+            return{
+                producto,
+                imagen
+            }
+        }else{
+            return{
+                producto,
+                imagen:''
+            }
+        }
+    });
+    console.log(productos);
     res.render('admin/producto/producto',
     {
         layout:'admin/layout',
-        data
+        productos
     });
 });
 router.get ('/agregar',async(req,res,next)=>{
@@ -23,7 +43,7 @@ router.post('/agregar',async (req,res,next)=>{
     try{
         var img_id='';
         console.log(req.files);
-        if(req.files && Object.keys(req.files).lenght>0){
+        if(req.files && Object.keys(req.files).length>0){
             imagen=req.files.imagen;
             img_id=(await uploader(imagen.tempFilePath)).public_id;
         }
@@ -52,23 +72,38 @@ router.get('/eliminar/:id',async (req,res,next)=>{
       
 });
 router.get('/modificar/:id',async (req,res,next)=>{  
-    var categoria=await categoriaModel.getCategoriabyid(req.params.id);
-      res.render('admin/categoria/modificar',{
+    var producto=await productoModel.getProductobyid(req.params.id);
+    var marca= await marcaModel.getMarcas();
+    var categoria=await categoriaModel.getCategoria();
+      res.render('admin/producto/modificar',{
         layout:'admin/layout',
+        producto,
+        marca,
         categoria
       });
 
 });
 router.post('/modificar',async (req,res,next)=>{
     try{    
-            let id=req.body.id_c;
-            let nombre_c=req.body.nombre_c;                                  
-            await categoriaModel.UpdateCategoria(nombre_c,id);
-            res.redirect('/admin/categoria')
-        
+        var img_id='';
+        console.log(req.files);
+        if(req.files && Object.keys(req.files).length>0){
+            imagen=req.files.imagen;
+            img_id=(await uploader(imagen.tempFilePath)).public_id;
+        }
+        console.log(req.body);
+            var id=req.body.id_p;
+            await productoModel.UpdateProducto(req.body,img_id,id);
+            res.redirect('/admin/producto') 
     }catch(error){
         console.log(error)
-        res.render('admin/categoria/modificar',{layout:'admin/layout',error:true,message:'No se cargo el cambio'})
+        var marca= await marcaModel.getMarcas();
+        var categoria=await categoriaModel.getCategoria();
+        res.render('admin/producto/modificar',{layout:'admin/layout',
+        marca,
+        categoria,
+        error:true,
+        message:'No se cargo el cambio'})
     }
 });
 module.exports=router;

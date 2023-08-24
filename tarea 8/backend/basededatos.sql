@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-07-2023 a las 15:50:58
+-- Tiempo de generación: 24-08-2023 a las 23:01:30
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -62,7 +62,8 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id_cl`, `nombre_cl`, `mail`, `contraseña`, `telefono`, `direccion`, `numero_de_tarjeta`) VALUES
-(1, 'Carlos', 'carlos@gmail.com', 'papas', NULL, NULL, NULL);
+(1, 'Carlos', 'carlos@gmail.com', 'papas', '5253525', 'alberdi 421', 152141414),
+(3, 'fede', 'fede@gmail.com', 'loco', '41414424124', 'culpina200', 51513513);
 
 -- --------------------------------------------------------
 
@@ -108,20 +109,23 @@ CREATE TABLE `producto` (
   `precio` int(11) DEFAULT NULL,
   `id_categoria` int(11) DEFAULT NULL,
   `id_marca` int(11) DEFAULT NULL,
-  `id_stock` int(11) DEFAULT NULL
+  `id_stock` int(11) DEFAULT NULL,
+  `ingreso` date DEFAULT NULL,
+  `cantidades` int(11) DEFAULT NULL,
+  `imagen` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id_p`, `nombre_p`, `precio`, `id_categoria`, `id_marca`, `id_stock`) VALUES
-(1, 'Dead Space', 25000, 1, 2, 2),
-(2, 'PS5', 400000, 2, 2, 2),
-(3, 'Metroid Prime', 32000, 1, 1, 1),
-(4, 'Resident Evil 4', 25000, 1, 3, 2),
-(5, 'Street Fighter 6', 34000, 1, 3, 1),
-(6, 'Legend of Zelda tears of a kingd', 34000, 1, 1, 2);
+INSERT INTO `producto` (`id_p`, `nombre_p`, `precio`, `id_categoria`, `id_marca`, `id_stock`, `ingreso`, `cantidades`, `imagen`) VALUES
+(1, 'Dead Space', 25000, 1, 2, 2, '2023-04-12', 20, '1665006050-dead-space-remake-ps5-pre-orden-0_hxgklv.jpg'),
+(2, 'PS5', 400000, 2, 2, 2, '2022-05-25', 23, 'v1692691037/65501212-7f77-4fb7-91c5-6366b2e731c0.__CR0_0_600_450_PT0_SX600_V1____uzxeks.jpg'),
+(3, 'Metroid Prime', 32000, 1, 1, 1, '2023-04-19', 0, 'v1692691038/1019-producto-metroid-prime-remastered-nintendo-switch-458_u9pdxl.jpg'),
+(4, 'Resident Evil 4', 25000, 1, 3, 2, '2023-03-31', 24, 'v1692691037/residentevil4_3870863t_k355x2.jpg'),
+(5, 'Street Fighter 6', 34000, 1, 3, 1, '2023-06-08', 0, 'v1692691036/descarga_6_wxojkn.jpg'),
+(6, 'Legend of Zelda tears of a kingd', 34000, 1, 1, 2, '2023-06-18', 14, 'v1692691038/91O9Uk5oWAL._SL1500__wqhvnj.jpg');
 
 -- --------------------------------------------------------
 
@@ -213,19 +217,19 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_c` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_c` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cl` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cl` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `marca`
 --
 ALTER TABLE `marca`
-  MODIFY `id_m` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_m` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `orden`
@@ -237,7 +241,7 @@ ALTER TABLE `orden`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `stock`
